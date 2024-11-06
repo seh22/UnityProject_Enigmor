@@ -1,0 +1,23 @@
+애니메이션 방식
+
+1. 오브젝트 (열쇠, 시계)
+https://easings.net/#easeOutCubic 
+점점빨라지는 방식으로 원합니다.
+
+2. 오브젝트 (돋보기)
+https://easings.net/#easeOutQuart
+
+3. 선  
+https://easings.net/#easeInSine
+
+
+
+폰트 
+
+https://www.sokcho.go.kr/portal/happysokcho/citysymbol/font
+
+출처 남기기 (예시) 
+"본 저작물은 'OOO(기관명)'에서 'OO년' 작성하여 공공누리 제O유형으로 개방한 '저작물명(작성자:OOO)'을 이용하였으며,
+해당 저작물은 'OOO(기관명), OOO(홈페이지 주소)'에서 무료로 다운받으실 수 있습니다."
+
+
