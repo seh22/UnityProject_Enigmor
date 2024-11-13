@@ -37,9 +37,7 @@ public class LineConnect : MonoBehaviour
     private List<GameObject> level2Objects;
     private List<GameObject> level3Objects;
 
-    
-    private List<GameObject> lineLevel2Objects;
-    private List<GameObject> lineLevel3Objects;
+    private GameObject[,] outLineObjects = new GameObject[2, 3];
 
     private RaycastHit2D hit;
     private GameObject targetObject;
@@ -65,13 +63,22 @@ public class LineConnect : MonoBehaviour
         level3Objects = new List<GameObject>(GameObject.FindGameObjectsWithTag("Level3"));
         level3Objects = level3Objects.OrderBy(obj => obj.name).ToList();
 
-        // "Level2" Line 태그 오브젝트 
-        lineLevel2Objects = new List<GameObject>(GameObject.FindGameObjectsWithTag("LineLevel2"));
-        lineLevel2Objects = level2Objects.OrderBy(obj => obj.name).ToList();
 
-        // "Level3" Line 태그 오브젝트
-        lineLevel3Objects = new List<GameObject>(GameObject.FindGameObjectsWithTag("LineLevel3"));
-        lineLevel3Objects = level3Objects.OrderBy(obj => obj.name).ToList();
+        // LineLevel2 태그를 가진 오브젝트를 배열 첫 번째 행에 저장
+        GameObject[] lineLevel2Objects = GameObject.FindGameObjectsWithTag("LineLevel2");
+        for (int i = 0; i < 3; i++)
+        {
+            outLineObjects[0, i] = lineLevel2Objects[i];
+            Debug.Log(outLineObjects[0, i]);
+        }
+
+        // LineLevel3 태그를 가진 오브젝트를 배열 두 번째 행에 저장
+        GameObject[] lineLevel3Objects = GameObject.FindGameObjectsWithTag("LineLevel3");
+        for (int i = 0; i < 3; i++)
+        {
+            outLineObjects[1, i] = lineLevel3Objects[i];
+            Debug.Log(outLineObjects[1, i]);
+        }
 
     }
 
@@ -229,9 +236,6 @@ public class LineConnect : MonoBehaviour
 
                     // 기존의 연결 0으로 초기화
                     colorCheck[0, targetIndex] = 0;
-
-                    // line 코드 넣기 흰색으로 초기화
-                    LineColorName(lineIndex);
                 }
 
                 for (int i = 0; i < colorCheck.GetLength(1); i++)
@@ -244,9 +248,6 @@ public class LineConnect : MonoBehaviour
                 }
                 activeLineRenderer.SetPosition(1, targetObject.transform.position);
                 colorCheck[0, targetIndex] = lineIndex;
-
-                // line 코드 넣기 해당 색상으로 변경
-                LineColorName(lineIndex);
 
                 Debug.Log( "Level1 -> Level2  1 : " + colorCheck[0, 0] + " / 2 : " + colorCheck[0, 1] + " / 3 : " + colorCheck[0, 2]+"\n" + 
                     "Level2 -> Level3  1 : " + colorCheck[1, 0] + " / 2 : " + colorCheck[1, 1] + " / 3 : " + colorCheck[1, 2]);
@@ -278,7 +279,6 @@ public class LineConnect : MonoBehaviour
                     // 기존의 연결 0으로 초기화
                     colorCheck[1, targetIndex] = 0;
 
-                    // line 코드 넣기 흰색으로 초기화
                 }
 
                 for (int i = 0; i < colorCheck.GetLength(1); i++)
@@ -362,9 +362,25 @@ public class LineConnect : MonoBehaviour
 
             }
 
+
             selectedObject = null;
             activeLineRenderer = null;
         }
+
+
+        // colorCheck 를 통해 선 색상 변경
+
+        for(int i = 0; i < 2; i++)
+        {
+            for(int j = 0; j < 2; j++)
+            {
+                LineColorName(outLineObjects[i, j], colorCheck[i, j]);
+            }
+        }
+
+        
+
+
     }
 
     private int GetLineIndex_1(LineRenderer line)
@@ -450,40 +466,28 @@ public class LineConnect : MonoBehaviour
         }
     }
 
-    private void LineColorName(int k )
+    private void LineColorName(GameObject obj ,int k )
     {
+        Debug.Log("obj", obj );
+        Debug.Log(k);
 
-       
-        GameObject obj = null;
-
-        if (LevelCheck == 2) { 
-            obj = lineLevel2Objects[level2Objects.IndexOf(selectedObject)];
-        }
-        if(LevelCheck == 3) {
-            obj = lineLevel3Objects[level3Objects.IndexOf(selectedObject)];
-        }
-
-        if (targetObject.transform != null)
+        OutLineColorScript ColorChangeScript = obj.GetComponent<OutLineColorScript>();
+        switch (k)
         {
-            OutLineColorScript parentOutlineColorScript = obj.GetComponent<OutLineColorScript>();
-            switch (k)
-            {
-                case 0:
-                    parentOutlineColorScript.ImageEnable();
-                    break;
-                case 1:
-                    parentOutlineColorScript.ChangeColor(Color.red);
-                    break;
-                case 2:
-                    parentOutlineColorScript.ChangeColor(Color.green);
-                    break;
-                case 3:
-                    parentOutlineColorScript.ChangeColor(Color.blue);
-                    break;
-                default:
-                    break;
-            }
-
+            case 0:
+                ColorChangeScript.ImageEnable();
+                break;
+            case 1:
+                ColorChangeScript.ChangeColor(Color.red);
+                break;
+            case 2:
+                ColorChangeScript.ChangeColor(Color.green);
+                break;
+            case 3:
+                ColorChangeScript.ChangeColor(Color.blue);
+                break;
+            default:
+                break;
         }
     }
 }
