@@ -103,8 +103,6 @@ public class LineConnect : MonoBehaviour
             {
                 LevelCheck = 1; // LevelCheck 1로 변경(마우스 드롭다운 시 확인을 위한 변수)
 
-                Debug.Log("hit  "+ LevelCheck);
-
                 // 감지된 오브젝트를 selectedObject로 설정
                 selectedObject = hit.collider.gameObject;
 
@@ -126,8 +124,6 @@ public class LineConnect : MonoBehaviour
             if (hit.collider != null && hit.collider.gameObject.CompareTag("Level2"))
             {
                 LevelCheck = 2; // LevelCheck 2로 변경(마우스 드롭다운 시 확인을 위한 변수)
-
-                Debug.Log("hit  " + LevelCheck);
 
                 // 감지된 오브젝트를 selectedObject로 설정
                 selectedObject = hit.collider.gameObject;
@@ -181,7 +177,6 @@ public class LineConnect : MonoBehaviour
                 // 목표 오브젝트의 인덱스값을 할당
                 GameObject targetObject = hit.collider.gameObject;
                 targetIndex = level2Objects.IndexOf(targetObject);
-                Debug.Log("타겟 인덱스 "+targetIndex);
 
                 // Level1 -> Level2 연결이 이미 있는 상태일 때
                 if (colorCheck[0, targetIndex] != 0 && colorCheck[0, targetIndex] != lineIndex)
@@ -244,11 +239,7 @@ public class LineConnect : MonoBehaviour
                 activeLineRenderer.SetPosition(1, targetObject.transform.position);
                 colorCheck[0, targetIndex] = lineIndex;
 
-                Debug.Log( "Level1 -> Level2  1 : " + colorCheck[0, 0] + " / 2 : " + colorCheck[0, 1] + " / 3 : " + colorCheck[0, 2]+"\n" + 
-                    "Level2 -> Level3  1 : " + colorCheck[1, 0] + " / 2 : " + colorCheck[1, 1] + " / 3 : " + colorCheck[1, 2]);
-
             }
-
             // Level2 -> Level3 마우스 드롭다운 했을 때
             else if (hit.collider != null && hit.collider.gameObject.CompareTag("Level3") && LevelCheck == 2)
             {
@@ -258,7 +249,6 @@ public class LineConnect : MonoBehaviour
                 // 목표 오브젝트의 인덱스값을 할당
                 GameObject targetObject = hit.collider.gameObject;
                 targetIndex = level3Objects.IndexOf(targetObject);
-                Debug.Log("line" + lineIndex);
 
                 //이미 연결이 있는 상태일 때
                 if (colorCheck[1, targetIndex] != 0 && colorCheck[1, targetIndex] != lineIndex)
@@ -273,7 +263,6 @@ public class LineConnect : MonoBehaviour
 
                     // 기존의 연결 0으로 초기화
                     colorCheck[1, targetIndex] = 0;
-
                 }
 
                 for (int i = 0; i < 3; i++)
@@ -286,12 +275,6 @@ public class LineConnect : MonoBehaviour
 
                 activeLineRenderer.SetPosition(1, targetObject.transform.position);
                 colorCheck[1, targetIndex] = lineIndex;
-
-                // line 코드 넣기 해당 색상으로 변경
-
-                Debug.Log("Level1 -> Level2  1 : " + colorCheck[0, 0] + " / 2 : " + colorCheck[0, 1] + " / 3 : " + colorCheck[0, 2] + "\n"
-                    + "Level2 -> Level3  1 : " + colorCheck[1, 0] + " / 2 : " + colorCheck[1, 1] + " / 3 : " + colorCheck[1, 2]);
-
 
             }
 
@@ -307,56 +290,71 @@ public class LineConnect : MonoBehaviour
                     // 현재 활성화된 LineRenderer의 인덱스의 값을 할당
                     lineIndex = GetLineIndex_1(activeLineRenderer);
 
-                    Debug.Log("Color" + lineIndex );
-
                     //정점 초기화
                     activeLineRenderer.positionCount = 0;
 
                     // 해당된 colorCheck 배열에서 상위 연결이 있는지 찾기
                     for (int i = 0; i < 3; i++)
                     {
-                        if (colorCheck[0, lineIndex-1] == colorCheck[1, i])
+                        if (lineIndex == colorCheck[1, i])
                         {
                             ColorSearch = i;
-                            //Debug.Log("level2" + ColorSearch);
+                            colorCheck[1, i] = 0;
                             break;
                         }
                     }
 
                     // 만약 Level2 -> Level3 연결이 있을 때 (상위 연결이 있을 경우)
-                    if (colorCheck[1, ColorSearch] != 0 && colorCheck[1, ColorSearch] != lineIndex-1)
+                    if ( ColorSearch != 0)
                     {
                         // 연결된 선 할당
-                        connectedLineRenderer = GetLineRendererByIndex_2(colorCheck[1, ColorSearch]);
+                        connectedLineRenderer = GetLineRendererByIndex_2(lineIndex);
+
+                        Debug.Log(connectedLineRenderer.name);
                         // 선 초기화
                         connectedLineRenderer.positionCount = 0;
                         // 기존의 연결 0으로 초기화
-                        colorCheck[1, ColorSearch] = 0;
+                        
                     }
 
-                    colorCheck[0,lineIndex-1] = 0;
+                    for (int i = 0; i < 3; i++)
+                    {
+                        if (lineIndex == colorCheck[0, i])
+                        {
+                            ColorSearch = i;
+                            colorCheck[0, i] = 0;
+                            break;
+                        }
+                    }
 
-                    Debug.Log("Level1 -> Level2  1 : " + colorCheck[0, 0] + " / 2 : " + colorCheck[0, 1] + " / 3 : " + colorCheck[0, 2] + "\n"
-                    + "Level2 -> Level3  1 : " + colorCheck[1, 0] + " / 2 : " + colorCheck[1, 1] + " / 3 : " + colorCheck[1, 2]);
+
                 }
+
                 // level2일때
                 else if (LevelCheck == 2)
                 {
                     lineIndex = GetLineIndex_2(activeLineRenderer);
-
-                    Debug.Log("Color" + lineIndex);
-
-
+                    for (int i = 0; i < 3; i++)
+                    {
+                        if (lineIndex == colorCheck[1, i])
+                        {
+                            ColorSearch = i;
+                            colorCheck[1, i] = 0;
+                            break;
+                        }
+                    }
                     colorCheck[1, lineIndex - 1] = 0;
 
-                    Debug.Log("Level1 -> Level2  1 : " + colorCheck[0, 0] + " / 2 : " + colorCheck[0, 1] + " / 3 : " + colorCheck[0, 2] + "\n"
-                    + "Level2 -> Level3  1 : " + colorCheck[1, 0] + " / 2 : " + colorCheck[1, 1] + " / 3 : " + colorCheck[1, 2]);
+
                     //정점 초기화
                     activeLineRenderer.positionCount = 0;
                 }
 
 
             }
+            Debug.Log("Level1 -> Level2  1 : " + colorCheck[0, 0] + " / 2 : " + colorCheck[0, 1] + " / 3 : " + colorCheck[0, 2] + "\n"
+                + "Level2 -> Level3  1 : " + colorCheck[1, 0] + " / 2 : " + colorCheck[1, 1] + " / 3 : " + colorCheck[1, 2]);
+
             selectedObject = null;
             activeLineRenderer = null;
             connectedLineRenderer = null;
@@ -458,9 +456,6 @@ public class LineConnect : MonoBehaviour
 
     private void LineColorName(GameObject lineObj ,int k )
     {
-        Debug.Log("obj" + lineObj.name );
-        Debug.Log("k"+k);
-
         OutLineColorScript ColorChangeScript = lineObj.GetComponent<OutLineColorScript>();
         switch (k)
         {
