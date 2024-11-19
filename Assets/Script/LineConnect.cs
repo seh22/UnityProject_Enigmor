@@ -176,8 +176,11 @@ public class LineConnect : MonoBehaviour
 
                 // 목표 오브젝트의 인덱스값을 할당
                 GameObject targetObject = hit.collider.gameObject;
+
+                // 인덱스를 할당
                 targetIndex = level2Objects.IndexOf(targetObject);
 
+                Debug.Log("targetIndex ; " +  targetIndex);
                 // Level1 -> Level2 연결이 이미 있는 상태일 때
                 if (colorCheck[0, targetIndex] != 0 && colorCheck[0, targetIndex] != lineIndex)
                 {
@@ -205,6 +208,9 @@ public class LineConnect : MonoBehaviour
                         colorCheck[1, ColorSearch] = 0;   
                     }
 
+
+
+
                     for (int i = 0; i < 3; i++)
                     {
                         if (colorCheck[1, i] == lineIndex)
@@ -215,8 +221,8 @@ public class LineConnect : MonoBehaviour
                         }
                     }
 
-                    activeLineRenderer.SetPosition(1, targetObject.transform.position);
-                    colorCheck[1, ColorSearch] = lineIndex;
+                   /* activeLineRenderer.SetPosition(1, targetObject.transform.position);
+                    colorCheck[1, ColorSearch] = lineIndex;*/
 
                     connectedLineRenderer = GetLineRendererByIndex_1(colorCheck[0, targetIndex]);
 
@@ -229,6 +235,8 @@ public class LineConnect : MonoBehaviour
                     colorCheck[0, targetIndex] = 0;
                 }
 
+
+                // 오브젝트의 같은 색상의 상위 연결이 이미 있는 경우
                 for (int i = 0; i <3; i++)
                 {
                     if (colorCheck[0, i] == lineIndex)
@@ -236,6 +244,8 @@ public class LineConnect : MonoBehaviour
                         colorCheck[0, i] = 0;
                     }
                 }
+
+
                 activeLineRenderer.SetPosition(1, targetObject.transform.position);
                 colorCheck[0, targetIndex] = lineIndex;
 
@@ -298,7 +308,7 @@ public class LineConnect : MonoBehaviour
                     {
                         if (lineIndex == colorCheck[1, i])
                         {
-                            ColorSearch = i;
+                            ColorSearch = colorCheck[1,i];
                             colorCheck[1, i] = 0;
                             break;
                         }
@@ -343,14 +353,11 @@ public class LineConnect : MonoBehaviour
                             break;
                         }
                     }
-                    colorCheck[1, lineIndex - 1] = 0;
 
 
                     //정점 초기화
                     activeLineRenderer.positionCount = 0;
                 }
-
-
             }
             Debug.Log("Level1 -> Level2  1 : " + colorCheck[0, 0] + " / 2 : " + colorCheck[0, 1] + " / 3 : " + colorCheck[0, 2] + "\n"
                 + "Level2 -> Level3  1 : " + colorCheck[1, 0] + " / 2 : " + colorCheck[1, 1] + " / 3 : " + colorCheck[1, 2]);
@@ -386,6 +393,7 @@ public class LineConnect : MonoBehaviour
         if (line == blueLine_2) return 3;
         return 0;
     }
+
     private LineRenderer GetLineRendererByIndex_1(int index)
     {
         switch (index)
