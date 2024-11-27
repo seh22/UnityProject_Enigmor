@@ -6,9 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class SceneChangeManager : MonoBehaviour
 {
-
-    
-
     void Update()
     {
         if (SceneManager.GetActiveScene().name == "ChapterScene")

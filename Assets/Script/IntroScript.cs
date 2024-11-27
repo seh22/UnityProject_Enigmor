@@ -62,7 +62,7 @@ public class IntroScript : MonoBehaviour
         {
             PlayerPrefs.SetString("UserName", userNameText);
             Debug.Log(PlayerPrefs.GetString("UserName"));
-            SceneManager.LoadScene("EpScene");
+            SceneManager.LoadScene("ChapterScene");
         }
         else
             Debug.Log("¿À·ù");
