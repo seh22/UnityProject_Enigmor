@@ -77,7 +77,7 @@ public class EpScrollView : MonoBehaviour
         if (EventSystem.current.IsPointerOverGameObject())
         {
             string selectedObjectName = EventSystem.current.currentSelectedGameObject != null ? EventSystem.current.currentSelectedGameObject.name : "None";
-            Debug.Log($"Pointer is over a UI element. Current selected GameObject: {selectedObjectName}");
+            //Debug.Log($"Pointer is over a UI element. Current selected GameObject: {selectedObjectName}");
             if (selectedObjectName != "파일") return;
         }
 
@@ -89,7 +89,7 @@ public class EpScrollView : MonoBehaviour
         {
             startTouchX = Input.mousePosition.x;
             //if (EventSystem.current.IsPointerOverGameObject()) return;
-            Debug.Log("StartPoint" + startTouchX);
+            //Debug.Log("StartPoint" + startTouchX);
             // 터치 시작 지점 (Swipe 방향 구분)
 
         }
@@ -98,7 +98,7 @@ public class EpScrollView : MonoBehaviour
             // 터치 종료 지점 (Swipe 방향 구분)
             endTouchX = Input.mousePosition.x;
 
-            Debug.Log("EndPoint : " + endTouchX);
+            //Debug.Log("EndPoint : " + endTouchX);
             UpdateSwipe();
         }
         // UI 중복방지

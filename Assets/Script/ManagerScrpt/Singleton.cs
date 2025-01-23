@@ -11,10 +11,14 @@ public class Singleton<T> : MonoBehaviour where T : Component
         {
             if (instance == null)
             {
-                instance = (T)FindObjectOfType(typeof(T));
+                // 해당 컴포넌트를 가지고 있는 게임 오브젝트를 찾아서 반환한다.
+                instance = (T)FindAnyObjectByType(typeof(T));
+
                 if (instance == null)
                 {
-                    SetupInstance();
+                    GameObject gameObj = new GameObject(typeof(T).Name, typeof(T));
+                    instance = gameObj.AddComponent<T>();
+
                 }
             }
             return instance;
@@ -22,29 +26,13 @@ public class Singleton<T> : MonoBehaviour where T : Component
     }
     public virtual void Awake()
     {
-        RemoveDuplicates();
-    }
-    private static void SetupInstance()
-    {
-        instance = (T)FindObjectOfType(typeof(T));
-        if (instance == null)
+        if (transform.parent != null && transform.root != null) // 해당 오브젝트가 자식 오브젝트라면
         {
-            GameObject gameObj = new GameObject();
-            gameObj.name = typeof(T).Name;
-            instance = gameObj.AddComponent<T>();
-            DontDestroyOnLoad(gameObj);
-        }
-    }
-    private void RemoveDuplicates()
-    {
-        if (instance == null)
-        {
-            instance = this as T;
-            DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(this.transform.root.gameObject); // 부모 오브젝트를 DontDestroyOnLoad 처리
         }
         else
         {
-            Destroy(gameObject);
+            DontDestroyOnLoad(this.gameObject); // 해당 오브젝트가 최 상위 오브젝트라면 자신을 DontDestroyOnLoad 처리
         }
     }
 }

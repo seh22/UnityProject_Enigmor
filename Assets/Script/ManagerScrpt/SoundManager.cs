@@ -34,6 +34,10 @@ public class SoundManager : Singleton<SoundManager>
     }
 
     // 배경음 볼륨을 저장하는 메서드
+
+    /// <summary>
+    /// 배경음 볼륨 저장
+    /// </summary>
     public void SaveBackgroundVolume(float volume)
     {
         BackgroundVolume = volume; // 변수 업데이트
@@ -42,6 +46,10 @@ public class SoundManager : Singleton<SoundManager>
     }
 
     // 효과음 볼륨을 저장하는 메서드
+
+    /// <summary>
+    /// 효과음 볼륨 저장
+    /// </summary>
     public void SaveEffectVolume(float volume)
     {
         EffectVolume = volume; // 변수 업데이트
@@ -50,6 +58,10 @@ public class SoundManager : Singleton<SoundManager>
     }
 
     // 진동 활성화 여부를 저장하는 메서드
+
+    /// <summary>
+    /// 진동 활성화 여부 저장
+    /// </summary>
     public void ToggleVibration(bool enabled)
     {
         VibrationEnabled = enabled; // 변수 업데이트
