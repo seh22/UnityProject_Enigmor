@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 
 
 public class EpScrollView : MonoBehaviour
 {
+    [SerializeField]
+    private TMP_Text stageNum;                      // Stage 이름 바꾸는 용도
     [SerializeField]
     private Scrollbar scrollBar;                    // Scrollbar의 위치를 바탕으로 현재 페이지 검사
     [SerializeField]
@@ -20,9 +24,10 @@ public class EpScrollView : MonoBehaviour
     [SerializeField]
     private Sprite thisImg;
 
+    public int currentPage = 0;            // 현재 페이지
+
     private float[] scrollPageValues;           // 각 페이지의 위치 값 [0.0 - 1.0]
     private float valueDistance = 0;            // 각 페이지 사이의 거리
-    private int currentPage = 0;            // 현재 페이지
     private int maxPage = 0;                // 최대 페이지
     private float startTouchX;              // 터치 시작 위치
     private float endTouchX;                    // 터치 종료 위치
@@ -69,44 +74,72 @@ public class EpScrollView : MonoBehaviour
 
     private void UpdateInput()
     {
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            string selectedObjectName = EventSystem.current.currentSelectedGameObject != null ? EventSystem.current.currentSelectedGameObject.name : "None";
+            Debug.Log($"Pointer is over a UI element. Current selected GameObject: {selectedObjectName}");
+            if (selectedObjectName != "파일") return;
+        }
+
         // 현재 Swipe를 진행중이면 터치 불가
         if (isSwipeMode == true) return;
 
-#if UNITY_EDITOR
         // 마우스 왼쪽 버튼을 눌렀을 때 1회
         if (Input.GetMouseButtonDown(0))
         {
-            // 터치 시작 지점 (Swipe 방향 구분)
             startTouchX = Input.mousePosition.x;
+            //if (EventSystem.current.IsPointerOverGameObject()) return;
+            Debug.Log("StartPoint" + startTouchX);
+            // 터치 시작 지점 (Swipe 방향 구분)
+
         }
         else if (Input.GetMouseButtonUp(0))
         {
             // 터치 종료 지점 (Swipe 방향 구분)
             endTouchX = Input.mousePosition.x;
 
+            Debug.Log("EndPoint : " + endTouchX);
             UpdateSwipe();
         }
-#endif
+        // UI 중복방지
+        
 
-#if UNITY_ANDROID
-		if ( Input.touchCount == 1 )
-		{
-			Touch touch = Input.GetTouch(0);
 
-			if ( touch.phase == TouchPhase.Began )
-			{
-				// 터치 시작 지점 (Swipe 방향 구분)
-				startTouchX = touch.position.x;
-			}
-			else if ( touch.phase == TouchPhase.Ended )
-			{
-				// 터치 종료 지점 (Swipe 방향 구분)
-				endTouchX = touch.position.x;
+        /*#if UNITY_EDITOR
+                // 마우스 왼쪽 버튼을 눌렀을 때 1회
+                if (Input.GetMouseButtonDown(0))
+                {
+                    // 터치 시작 지점 (Swipe 방향 구분)
+                    startTouchX = Input.mousePosition.x;
+                }
+                else if (Input.GetMouseButtonUp(0))
+                {
+                    // 터치 종료 지점 (Swipe 방향 구분)
+                    endTouchX = Input.mousePosition.x;
 
-				UpdateSwipe();
-			}
-		}
-#endif
+                    UpdateSwipe();
+                }
+        #endif
+
+        #if UNITY_ANDROID
+                if ( Input.touchCount == 1 )
+                {
+                    Touch touch = Input.GetTouch(0);
+
+                    if ( touch.phase == TouchPhase.Began )
+                    {
+                        // 터치 시작 지점 (Swipe 방향 구분)
+                        startTouchX = touch.position.x;
+                    }
+                    else if ( touch.phase == TouchPhase.Ended )
+                    {
+                        // 터치 종료 지점 (Swipe 방향 구분)
+                        endTouchX = touch.position.x;
+
+                        UpdateSwipe();
+                    }
+                }
+        #endif*/
     }
 
     private void UpdateSwipe()
@@ -150,6 +183,7 @@ public class EpScrollView : MonoBehaviour
     /// </summary>
     private IEnumerator OnSwipeOneStep(int index)
     {
+        Debug.Log("스왑효과 재생 코루틴 실행");
         float start = scrollBar.value;
         float current = 0;
         float percent = 0;
@@ -171,18 +205,20 @@ public class EpScrollView : MonoBehaviour
 
     private void UpdateCircleContent()
     {
-        // 아래에 배치된 페이지 버튼 크기, 색상 제어 (현재 머물고 있는 페이지의 버튼만 수정)
+        // Stage 이름, 아래에 배치된 페이지 버튼 크기, 색상 제어 (현재 머물고 있는 페이지의 버튼만 수정)
         for (int i = 0; i < scrollPageValues.Length; ++i)
         {
             circleContents[i].localScale = Vector2.one;
             circleContents[i].GetComponent<Image>().sprite = thisImg;
-
+            
             // 페이지의 절반을 넘어가면 현재 페이지 원을 바꾸도록
             if (scrollBar.value < scrollPageValues[i] + (valueDistance / 2) && scrollBar.value > scrollPageValues[i] - (valueDistance / 2))
             {
                 circleContents[i].localScale = Vector2.one * circleContentScale;
                 circleContents[i].GetComponent<Image>().sprite = chageImg;
             }
+            //Stage 이름 변경 스크립트
+            stageNum.text = "STAGE " + (currentPage + 1);
         }
     }
 }

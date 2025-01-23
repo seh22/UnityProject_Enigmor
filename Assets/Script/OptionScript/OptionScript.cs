@@ -18,6 +18,7 @@ public class OptionScript : MonoBehaviour
     {
         OptionBar.SetActive(true);
         optionBarIsTrue = true;
+
     }
 
     public void OptionBarClose()

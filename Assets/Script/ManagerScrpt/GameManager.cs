@@ -19,8 +19,4 @@ public class GameManager : MonoBehaviour
                 Destroy(this.gameObject); //둘 이상 존재하면 안되는 객체이니 방금 AWake된 자신을 삭제
         }
     }
-
-
-    
-
 }

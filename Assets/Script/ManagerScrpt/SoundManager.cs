@@ -2,67 +2,58 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SoundManager : MonoBehaviour
+public class SoundManager : Singleton<SoundManager>
 {
-    public static SoundManager instance;
+    // 배경음 볼륨 값을 저장하는 변수
+    public float BackgroundVolume { get; private set; } = 1.0f;
 
-    //BGM 종류들
-    public enum EBgm
+    // 효과음 볼륨 값을 저장하는 변수
+    public float EffectVolume { get; private set; } = 1.0f;
+
+    // 진동 활성화 여부를 저장하는 변수
+    public bool VibrationEnabled { get; private set; } = true;
+
+    // PlayerPrefs 키 이름 상수
+    private const string BackgroundVolumeKey = "BackgroundVolume";
+    private const string EffectVolumeKey = "EffectVolume";
+    private const string VibrationKey = "VibrationEnabled";
+
+    // Awake 메서드는 싱글톤 초기화 및 설정 값을 로드합니다.
+    public override void Awake()
     {
-        BGM_TITLE,
-        BGM_GAME
+        base.Awake(); // Singleton Awake 호출
+        LoadSettings(); // 저장된 설정 로드
     }
 
-    //SFX 종류들
-    public enum ESfx
+    // 저장된 설정 값을 PlayerPrefs에서 불러옵니다.
+    private void LoadSettings()
     {
-        SFX_BUTTON,
-        SFX_ENDING,
-        SFX_TOKEN,
-        SFX_BOTTLE,
-        SFX_OPENDOOR,
-        SFX_MissionClear
+        BackgroundVolume = PlayerPrefs.GetFloat(BackgroundVolumeKey, 1.0f); // 배경음 볼륨 로드 (기본값 1.0)
+        EffectVolume = PlayerPrefs.GetFloat(EffectVolumeKey, 1.0f);         // 효과음 볼륨 로드 (기본값 1.0)
+        VibrationEnabled = PlayerPrefs.GetInt(VibrationKey, 1) == 1;       // 진동 설정 로드 (기본값 true)
     }
 
-    //audio clip 담을 수 있는 배열
-    [SerializeField] AudioClip[] bgms;
-    [SerializeField] AudioClip[] sfxs;
-
-    //플레이하는 AudioSource
-    [SerializeField] AudioSource audioBgm;
-    [SerializeField] AudioSource audioSfx;
-
-    private void Awake()
+    // 배경음 볼륨을 저장하는 메서드
+    public void SaveBackgroundVolume(float volume)
     {
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        BackgroundVolume = volume; // 변수 업데이트
+        PlayerPrefs.SetFloat(BackgroundVolumeKey, volume); // PlayerPrefs에 저장
+        PlayerPrefs.Save(); // 저장 적용
     }
 
-    // EBgm 열거형을 매개변수로 받아 해당하는 배경 음악 클립을 재생
-    public void PlayBGM(EBgm bgmIdx)
+    // 효과음 볼륨을 저장하는 메서드
+    public void SaveEffectVolume(float volume)
     {
-        //enum int형으로 형변환 가능
-        audioBgm.clip = bgms[(int)bgmIdx];
-        audioBgm.Play();
+        EffectVolume = volume; // 변수 업데이트
+        PlayerPrefs.SetFloat(EffectVolumeKey, volume); // PlayerPrefs에 저장
+        PlayerPrefs.Save(); // 저장 적용
     }
 
-    // 현재 재생 중인 배경 음악 정지
-    public void StopBGM()
+    // 진동 활성화 여부를 저장하는 메서드
+    public void ToggleVibration(bool enabled)
     {
-        audioBgm.Stop();
+        VibrationEnabled = enabled; // 변수 업데이트
+        PlayerPrefs.SetInt(VibrationKey, enabled ? 1 : 0); // PlayerPrefs에 저장
+        PlayerPrefs.Save(); // 저장 적용
     }
-
-    // ESfx 열거형을 매개변수로 받아 해당하는 효과음 클립을 재생
-    public void PlaySFX(ESfx esfx)
-    {
-        audioSfx.PlayOneShot(sfxs[(int)esfx]);
-    }
-
 }

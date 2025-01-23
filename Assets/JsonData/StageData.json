@@ -1,0 +1,199 @@
+{
+  "stages": [
+    {
+      "stage": 1,
+      "episodes": [
+        {
+          "episode": 1,
+          "cleared": 0
+        },
+        {
+          "episode": 2,
+          "cleared": 0
+        },
+        {
+          "episode": 3,
+          "cleared": 0
+        },
+        {
+          "episode": 4,
+          "cleared": 0
+        },
+        {
+          "episode": 5,
+          "cleared": 0
+        },
+        {
+          "episode": 6,
+          "cleared": 0
+        },
+        {
+          "episode": 7,
+          "cleared": 0
+        },
+        {
+          "episode": 8,
+          "cleared": 0
+        },
+        {
+          "episode": 9,
+          "cleared": 0
+        },
+        {
+          "episode": 10,
+          "cleared": 0
+        },
+        {
+          "episode": 11,
+          "cleared": 0
+        },
+        {
+          "episode": 12,
+          "cleared": 0
+        },
+        {
+          "episode": 13,
+          "cleared": 0
+        },
+        {
+          "episode": 14,
+          "cleared": 0
+        },
+        {
+          "episode": 15,
+          "cleared": 0
+        }
+      ]
+    },
+    {
+      "stage": 2,
+      "episodes": [
+        {
+          "episode": 1,
+          "cleared": 0
+        },
+        {
+          "episode": 2,
+          "cleared": 0
+        },
+        {
+          "episode": 3,
+          "cleared": 0
+        },
+        {
+          "episode": 4,
+          "cleared": 0
+        },
+        {
+          "episode": 5,
+          "cleared": 0
+        },
+        {
+          "episode": 6,
+          "cleared": 0
+        },
+        {
+          "episode": 7,
+          "cleared": 0
+        },
+        {
+          "episode": 8,
+          "cleared": 0
+        },
+        {
+          "episode": 9,
+          "cleared": 0
+        },
+        {
+          "episode": 10,
+          "cleared": 0
+        },
+        {
+          "episode": 11,
+          "cleared": 0
+        },
+        {
+          "episode": 12,
+          "cleared": 0
+        },
+        {
+          "episode": 13,
+          "cleared": 0
+        },
+        {
+          "episode": 14,
+          "cleared": 0
+        },
+        {
+          "episode": 15,
+          "cleared": 0
+        }
+      ]
+    },
+    {
+      "stage": 3,
+      "episodes": [
+        {
+          "episode": 1,
+          "cleared": 0
+        },
+        {
+          "episode": 2,
+          "cleared": 0
+        },
+        {
+          "episode": 3,
+          "cleared": 0
+        },
+        {
+          "episode": 4,
+          "cleared": 0
+        },
+        {
+          "episode": 5,
+          "cleared": 0
+        },
+        {
+          "episode": 6,
+          "cleared": 0
+        },
+        {
+          "episode": 7,
+          "cleared": 0
+        },
+        {
+          "episode": 8,
+          "cleared": 0
+        },
+        {
+          "episode": 9,
+          "cleared": 0
+        },
+        {
+          "episode": 10,
+          "cleared": 0
+        },
+        {
+          "episode": 11,
+          "cleared": 0
+        },
+        {
+          "episode": 12,
+          "cleared": 0
+        },
+        {
+          "episode": 13,
+          "cleared": 0
+        },
+        {
+          "episode": 14,
+          "cleared": 0
+        },
+        {
+          "episode": 15,
+          "cleared": 0
+        }
+      ]
+    }
+  ]
+}

@@ -13,7 +13,9 @@ public class StageEpChangeScript : MonoBehaviour
 
     public void OnClickStageButton()
     {
-        if(epBar != null)
+        
+
+        if (epBar != null)
         {
             epBar.verticalNormalizedPosition = 1f;
         }

@@ -1,0 +1,253 @@
+{
+  "stage": 1,
+  "episodes": [
+    {
+      "episode": 1,
+      "intro_story": [ "에피소드 1의 인트로 스토리" ],
+      "hints": [ "힌트 1", "힌트 2" ],
+      "evidence": [ "제일 키가 큰 용의자는 성공의 길을 알고 싶어한다.", "스마트 폰은 벤치에서 발견되지 않았다.", "페퍼민트 펭은 비밀을 안좋아 한다.", "비밀 메모장의 글씨체와 벤치의 글씨체는 같은 사람의 글씨체다.", "도로에 날카로운 모서리로 찍힌 자국이 많다.", "범인이 있었던 장소엔 X자 표시가 있었다." ],
+      "characters": [
+        {
+          "character_id": 0,
+          "name": "다크 린",
+          "traits": [ "180cm, 오른손잡이, 녹색 눈, 검은 털, 고양이 수인", "안전 운전으로 마을 중 안가본 곳이 없을 정도로 마을의 지리를 잘 안다. 물론 살인사건의 장소들도...", "밤에도 앞이 잘 보인다.", "마을의 지리를 잘 알고 있으며, 사건 현장이로 이동하던 중" ]
+        },
+        {
+          "character_id": 1,
+          "name": "페퍼민트 펭",
+          "traits": [ "165cm, 왼손잡이, 검은 눈, 흰 털, 펭귄 수인", "얼음 동굴과 빙하 탐험가. 마을에선 취미로 얼음 조각상을 팔고 있다.", "수중에서 민첩함을 발휘한다..", "얼음 조각상을 팔기 위해 택시를 이용함." ]
+        },
+        {
+          "character_id": 2,
+          "name": "루비 보스",
+          "traits": [ "175cm, 왼손잡이, 황갈색 눈, 주황색 털, 여우 수인", "특정 범죄 조직 보스. 뒷 세계에선 그의 손을 안 거쳐간 일이 없다. 빨간색의 보석이 어울린다.", "모든 말을 믿어선 안된다.", "비밀 회의를 위해 이동중." ]
+        }
+      ],
+      "locations": [
+        {
+          "location_id": 0,
+          "name": "장소 A",
+          "traits": [ "특징 1" ]
+        },
+        {
+          "location_id": 1,
+          "name": "장소 B",
+          "traits": [ "특징 2" ]
+        },
+        {
+          "location_id": 2,
+          "name": "장소 C",
+          "traits": [ "특징 3" ]
+        }
+      ],
+      "weapons": [
+        {
+          "weapon_id": 0,
+          "name": "무기 A",
+          "traits": [ "특징 1" ]
+        },
+        {
+          "weapon_id": 1,
+          "name": "무기 B",
+          "traits": [ "특징 2" ]
+        },
+        {
+          "weapon_id": 2,
+          "name": "무기 C",
+          "traits": [ "특징 3" ]
+        }
+      ],
+      "culprit": {
+        "character_id": 0,
+        "weapon_id": 1,
+        "location_id": 2
+      }
+    },
+    {
+      "episode": 2,
+      "intro_story": "에피소드 2의 인트로 스토리",
+      "hints": [ "힌트 A", "힌트 B" ],
+      "evidence": [ "증거 X", "증거 Y" ],
+      "characters": [
+        {
+          "character_id": 0,
+          "name": "캐릭터 D",
+          "traits": [ "특징 A" ]
+        },
+        {
+          "character_id": 1,
+          "name": "캐릭터 E",
+          "traits": [ "특징 B" ]
+        },
+        {
+          "character_id": 2,
+          "name": "캐릭터 F",
+          "traits": [ "특징 C" ]
+        }
+      ],
+      "locations": [
+        {
+          "location_id": 0,
+          "name": "장소 X",
+          "traits": [ "특징 A" ]
+        },
+        {
+          "location_id": 1,
+          "name": "장소 Y",
+          "traits": [ "특징 B" ]
+        },
+        {
+          "location_id": 2,
+          "name": "장소 Z",
+          "traits": [ "특징 C" ]
+        }
+      ],
+      "weapons": [
+        {
+          "weapon_id": 0,
+          "name": "무기 X",
+          "traits": [ "특징 A" ]
+        },
+        {
+          "weapon_id": 1,
+          "name": "무기 Y",
+          "traits": [ "특징 B" ]
+        },
+        {
+          "weapon_id": 2,
+          "name": "무기 Z",
+          "traits": [ "특징 C" ]
+        }
+      ],
+      "culprit": {
+        "character_id": 1,
+        "weapon_id": 0,
+        "location_id": 2
+      }
+    },
+    {
+      "episode": 3,
+      "intro_story": "에피소드 2의 인트로 스토리",
+      "hints": [ "힌트 A", "힌트 B" ],
+      "evidence": [ "증거 X", "증거 Y" ],
+      "characters": [
+        {
+          "character_id": 0,
+          "name": "캐릭터 D",
+          "traits": [ "특징 A" ]
+        },
+        {
+          "character_id": 1,
+          "name": "캐릭터 E",
+          "traits": [ "특징 B" ]
+        },
+        {
+          "character_id": 2,
+          "name": "캐릭터 F",
+          "traits": [ "특징 C" ]
+        }
+      ],
+      "locations": [
+        {
+          "location_id": 0,
+          "name": "장소 X",
+          "traits": [ "특징 A" ]
+        },
+        {
+          "location_id": 1,
+          "name": "장소 Y",
+          "traits": [ "특징 B" ]
+        },
+        {
+          "location_id": 2,
+          "name": "장소 Z",
+          "traits": [ "특징 C" ]
+        }
+      ],
+      "weapons": [
+        {
+          "weapon_id": 0,
+          "name": "무기 X",
+          "traits": [ "특징 A" ]
+        },
+        {
+          "weapon_id": 1,
+          "name": "무기 Y",
+          "traits": [ "특징 B" ]
+        },
+        {
+          "weapon_id": 2,
+          "name": "무기 Z",
+          "traits": [ "특징 C" ]
+        }
+      ],
+      "culprit": {
+        "character_id": 1,
+        "weapon_id": 0,
+        "location_id": 2
+      }
+    },
+    {
+      "episode": 4,
+      "intro_story": "에피소드 2의 인트로 스토리",
+      "hints": [ "힌트 A", "힌트 B" ],
+      "evidence": [ "증거 X", "증거 Y" ],
+      "characters": [
+        {
+          "character_id": 0,
+          "name": "캐릭터 D",
+          "traits": [ "특징 A" ]
+        },
+        {
+          "character_id": 1,
+          "name": "캐릭터 E",
+          "traits": [ "특징 B" ]
+        },
+        {
+          "character_id": 2,
+          "name": "캐릭터 F",
+          "traits": [ "특징 C" ]
+        }
+      ],
+      "locations": [
+        {
+          "location_id": 0,
+          "name": "장소 X",
+          "traits": [ "특징 A" ]
+        },
+        {
+          "location_id": 1,
+          "name": "장소 Y",
+          "traits": [ "특징 B" ]
+        },
+        {
+          "location_id": 2,
+          "name": "장소 Z",
+          "traits": [ "특징 C" ]
+        }
+      ],
+      "weapons": [
+        {
+          "weapon_id": 0,
+          "name": "무기 X",
+          "traits": [ "특징 A" ]
+        },
+        {
+          "weapon_id": 1,
+          "name": "무기 Y",
+          "traits": [ "특징 B" ]
+        },
+        {
+          "weapon_id": 2,
+          "name": "무기 Z",
+          "traits": [ "특징 C" ]
+        }
+      ],
+      "culprit": {
+        "character_id": 1,
+        "weapon_id": 0,
+        "location_id": 2
+      }
+    }
+  ]
+}
