@@ -435,6 +435,7 @@ GameObject:
   - component: {fileID: 8033958166695179749}
   - component: {fileID: 913119503220288651}
   - component: {fileID: 3989581201441129508}
+  - component: {fileID: 6472969141863604904}
   m_Layer: 5
   m_Name: 5
   m_TagString: NonSwipe
@@ -543,7 +544,34 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 913119503220288651}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6472969141863604904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1454768612070305654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4ab4f92d6a3a3a4f940a1527d9e317c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stageNum: 0
+  epNum: 5
+  clearImg: {fileID: 7664733058046958499}
 --- !u!1 &1590571486101176664
 GameObject:
   m_ObjectHideFlags: 0
@@ -631,6 +659,7 @@ GameObject:
   - component: {fileID: 1744333588180434489}
   - component: {fileID: 4966514264342587550}
   - component: {fileID: 5942621382338536937}
+  - component: {fileID: 2482622711605836185}
   m_Layer: 5
   m_Name: 7
   m_TagString: NonSwipe
@@ -739,7 +768,34 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4966514264342587550}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2482622711605836185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2035857321729641866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4ab4f92d6a3a3a4f940a1527d9e317c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stageNum: 0
+  epNum: 7
+  clearImg: {fileID: 5109267769296898066}
 --- !u!1 &2058315367294602391
 GameObject:
   m_ObjectHideFlags: 0
@@ -752,6 +808,7 @@ GameObject:
   - component: {fileID: 3519163399466094798}
   - component: {fileID: 3188287547330805765}
   - component: {fileID: 5225583840265753838}
+  - component: {fileID: 1663087668049485537}
   m_Layer: 5
   m_Name: 11
   m_TagString: NonSwipe
@@ -860,7 +917,34 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3188287547330805765}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1663087668049485537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058315367294602391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4ab4f92d6a3a3a4f940a1527d9e317c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stageNum: 0
+  epNum: 11
+  clearImg: {fileID: 7216534454102189941}
 --- !u!1 &2108745113343305834
 GameObject:
   m_ObjectHideFlags: 0
@@ -1068,6 +1152,7 @@ GameObject:
   - component: {fileID: 233218904715580303}
   - component: {fileID: 262439108632042223}
   - component: {fileID: 8219026742103837347}
+  - component: {fileID: 6457802308363990897}
   m_Layer: 5
   m_Name: 3
   m_TagString: NonSwipe
@@ -1176,7 +1261,34 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 262439108632042223}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6457802308363990897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2376183987747945224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4ab4f92d6a3a3a4f940a1527d9e317c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stageNum: 0
+  epNum: 3
+  clearImg: {fileID: 2292278263883144397}
 --- !u!1 &3166448029363040935
 GameObject:
   m_ObjectHideFlags: 0
@@ -1189,6 +1301,7 @@ GameObject:
   - component: {fileID: 301040007040054818}
   - component: {fileID: 8964940660606633053}
   - component: {fileID: 4304847201675656779}
+  - component: {fileID: 1157886979816802749}
   m_Layer: 5
   m_Name: 12
   m_TagString: NonSwipe
@@ -1297,7 +1410,34 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8964940660606633053}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1157886979816802749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3166448029363040935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4ab4f92d6a3a3a4f940a1527d9e317c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stageNum: 0
+  epNum: 12
+  clearImg: {fileID: 7692282900573844129}
 --- !u!1 &3363362670252097938
 GameObject:
   m_ObjectHideFlags: 0
@@ -1310,6 +1450,7 @@ GameObject:
   - component: {fileID: 85290734662132190}
   - component: {fileID: 7046629987794573255}
   - component: {fileID: 6904498438852528970}
+  - component: {fileID: 3091814639333478104}
   m_Layer: 5
   m_Name: 4
   m_TagString: NonSwipe
@@ -1418,7 +1559,34 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7046629987794573255}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3091814639333478104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3363362670252097938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4ab4f92d6a3a3a4f940a1527d9e317c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stageNum: 0
+  epNum: 4
+  clearImg: {fileID: 7029354052006114333}
 --- !u!1 &3397442095694800589
 GameObject:
   m_ObjectHideFlags: 0
@@ -1506,6 +1674,7 @@ GameObject:
   - component: {fileID: 229871123014466}
   - component: {fileID: 5787551834284639354}
   - component: {fileID: 5133132726844562706}
+  - component: {fileID: 2968361556771914654}
   m_Layer: 5
   m_Name: 10
   m_TagString: NonSwipe
@@ -1614,7 +1783,34 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5787551834284639354}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2968361556771914654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3664080306725947786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4ab4f92d6a3a3a4f940a1527d9e317c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stageNum: 0
+  epNum: 10
+  clearImg: {fileID: 7053067793101306999}
 --- !u!1 &3709775900882081956
 GameObject:
   m_ObjectHideFlags: 0
@@ -1692,6 +1888,7 @@ GameObject:
   - component: {fileID: 7243894185837574306}
   - component: {fileID: 2351272744627986652}
   - component: {fileID: 6239982465725035556}
+  - component: {fileID: 9145709719508452514}
   m_Layer: 5
   m_Name: 13
   m_TagString: NonSwipe
@@ -1800,7 +1997,34 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2351272744627986652}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &9145709719508452514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3744397485932572923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4ab4f92d6a3a3a4f940a1527d9e317c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stageNum: 0
+  epNum: 13
+  clearImg: {fileID: 1590571486101176664}
 --- !u!1 &4982920805744271868
 GameObject:
   m_ObjectHideFlags: 0
@@ -1953,6 +2177,7 @@ GameObject:
   - component: {fileID: 2103785426920101616}
   - component: {fileID: 642070726558685081}
   - component: {fileID: 407193899402261027}
+  - component: {fileID: 4508950065992412779}
   m_Layer: 5
   m_Name: 1
   m_TagString: NonSwipe
@@ -2061,7 +2286,34 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 642070726558685081}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5139592613362104194}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &4508950065992412779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5139592613362104194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4ab4f92d6a3a3a4f940a1527d9e317c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stageNum: 0
+  epNum: 1
+  clearImg: {fileID: 3397442095694800589}
 --- !u!1 &5264373498645928755
 GameObject:
   m_ObjectHideFlags: 0
@@ -2074,6 +2326,7 @@ GameObject:
   - component: {fileID: 8441301765123233391}
   - component: {fileID: 2261349551180604925}
   - component: {fileID: 6800073126718946544}
+  - component: {fileID: 3967553350227061181}
   m_Layer: 5
   m_Name: 14
   m_TagString: NonSwipe
@@ -2182,7 +2435,34 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2261349551180604925}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3967553350227061181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5264373498645928755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4ab4f92d6a3a3a4f940a1527d9e317c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stageNum: 0
+  epNum: 14
+  clearImg: {fileID: 5971397042186045698}
 --- !u!1 &5326436020727504570
 GameObject:
   m_ObjectHideFlags: 0
@@ -2467,6 +2747,7 @@ GameObject:
   - component: {fileID: 1963207911690246444}
   - component: {fileID: 7736012760116336353}
   - component: {fileID: 3347906240507780071}
+  - component: {fileID: 8174817543935921996}
   m_Layer: 5
   m_Name: 8
   m_TagString: NonSwipe
@@ -2575,7 +2856,34 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7736012760116336353}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8174817543935921996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5832740164786410718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4ab4f92d6a3a3a4f940a1527d9e317c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stageNum: 0
+  epNum: 8
+  clearImg: {fileID: 1256016962978199232}
 --- !u!1 &5971397042186045698
 GameObject:
   m_ObjectHideFlags: 0
@@ -2746,9 +3054,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 8898761434157310103}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 462.985, y: -0}
   m_SizeDelta: {x: 100, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &7029354052006114333
@@ -2988,6 +3296,7 @@ GameObject:
   - component: {fileID: 4659775782332334402}
   - component: {fileID: 386507206311565819}
   - component: {fileID: 694648059257953245}
+  - component: {fileID: 5688085288451396006}
   m_Layer: 5
   m_Name: 6
   m_TagString: NonSwipe
@@ -3096,7 +3405,34 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 386507206311565819}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &5688085288451396006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7409414210147940306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4ab4f92d6a3a3a4f940a1527d9e317c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stageNum: 0
+  epNum: 6
+  clearImg: {fileID: 834248322814038053}
 --- !u!1 &7664733058046958499
 GameObject:
   m_ObjectHideFlags: 0
@@ -3259,6 +3595,7 @@ GameObject:
   - component: {fileID: 3169945612048681571}
   - component: {fileID: 4622538967070768788}
   - component: {fileID: 4673547554200332183}
+  - component: {fileID: 286293959258252993}
   m_Layer: 5
   m_Name: 9
   m_TagString: NonSwipe
@@ -3367,7 +3704,34 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4622538967070768788}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &286293959258252993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7718406182020965019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4ab4f92d6a3a3a4f940a1527d9e317c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stageNum: 0
+  epNum: 9
+  clearImg: {fileID: 1268595839964656579}
 --- !u!1 &7807478765150636265
 GameObject:
   m_ObjectHideFlags: 0
@@ -3380,6 +3744,7 @@ GameObject:
   - component: {fileID: 6570206746663758197}
   - component: {fileID: 4943814272471903783}
   - component: {fileID: 123247011026457282}
+  - component: {fileID: 6735114643037447821}
   m_Layer: 5
   m_Name: 15
   m_TagString: NonSwipe
@@ -3488,7 +3853,34 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4943814272471903783}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6735114643037447821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7807478765150636265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4ab4f92d6a3a3a4f940a1527d9e317c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stageNum: 0
+  epNum: 16
+  clearImg: {fileID: 5571923353719766408}
 --- !u!1 &7879627890084979164
 GameObject:
   m_ObjectHideFlags: 0
@@ -3566,6 +3958,7 @@ GameObject:
   - component: {fileID: 1172458001630156110}
   - component: {fileID: 4428750053023185177}
   - component: {fileID: 6218524614950624274}
+  - component: {fileID: 7230775308433876070}
   m_Layer: 5
   m_Name: 2
   m_TagString: NonSwipe
@@ -3674,7 +4067,34 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4428750053023185177}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &7230775308433876070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8072075242436926956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4ab4f92d6a3a3a4f940a1527d9e317c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stageNum: 0
+  epNum: 2
+  clearImg: {fileID: 8399461534157362112}
 --- !u!1 &8171831245084487695
 GameObject:
   m_ObjectHideFlags: 0
