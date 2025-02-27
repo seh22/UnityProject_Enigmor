@@ -26,8 +26,10 @@ public class GameData
 
 public class DataManager : Singleton<DataManager>
 {
-
     public GameData gameData; // 게임 데이터를 메모리에서 관리
+    public int selectedStage; // 선택한 스테이지
+    public int selectedEpisode; // 선택한 에피소드
+
     private string dataPath;
 
     public override void Awake()
@@ -111,7 +113,9 @@ public class DataManager : Singleton<DataManager>
             if (targetEpisode != null)
             {
                 targetEpisode.cleared = true;
+                Debug.Log("Ep" + targetEpisode.cleared);
                 SaveGameData(); // 클리어 상태 저장
+                
             }
         }
     }
@@ -123,6 +127,15 @@ public class DataManager : Singleton<DataManager>
     {
         var targetStage = gameData.stages.Find(s => s.stage == stage);
         return targetStage?.episodes.Find(e => e.episode == episode)?.cleared ?? false;
+    }
+
+    /// <summary>
+    /// 현재 스테이지, 에피소드
+    /// </summary>
+    public void SetSelectedEpisode(int stage, int episode)
+    {
+        selectedStage = stage;
+        selectedEpisode = episode;
     }
 
 }

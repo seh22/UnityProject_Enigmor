@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EpUIUpdataScript : MonoBehaviour
 {
@@ -8,7 +9,6 @@ public class EpUIUpdataScript : MonoBehaviour
     private int stageNum; // 스테이지 번호 (1, 2, 3 등)
     [SerializeField]
     private int epNum;
-
     [SerializeField]
     private GameObject clearImg;
 
@@ -32,8 +32,10 @@ public class EpUIUpdataScript : MonoBehaviour
         }
     }
 
-    public void OnClickCloseButton()
+    public void OnClickEpButton()
     {
-        
+        DataManager.Instance.SetSelectedEpisode(stageNum-1,epNum-1);
+        Debug.Log(stageNum + "//" + epNum);
+        SceneManager.LoadScene("PlayScene");
     }
 }

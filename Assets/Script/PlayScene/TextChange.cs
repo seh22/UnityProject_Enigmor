@@ -1,9 +1,12 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScenesChangeManager : MonoBehaviour
+public class TextChange : MonoBehaviour
 {
+    //public List<StageData> Text_stageData;
+
     // Start is called before the first frame update
     void Start()
     {
