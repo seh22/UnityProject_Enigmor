@@ -36,6 +36,6 @@ public class EpUIUpdataScript : MonoBehaviour
     {
         DataManager.Instance.SetSelectedEpisode(stageNum-1,epNum-1);
         Debug.Log(stageNum + "//" + epNum);
-        SceneManager.LoadScene("PlayScene");
+        LoadingSceneController.LoadScene("PlayScene");
     }
 }
