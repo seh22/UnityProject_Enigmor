@@ -2131,6 +2131,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameData:
     stages: []
+  selectedStage: 0
+  selectedEpisode: 0
 --- !u!1 &1885867616
 GameObject:
   m_ObjectHideFlags: 0
